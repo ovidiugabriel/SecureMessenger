@@ -15,14 +15,7 @@ safestr_t* SAFESTR_Make(safestr_t* pSafeString, int size);
 // Initial Source: https://zone.ni.com/reference/en-XX/help/370051V-01/cvi/libref/cviformatting_and_io_library_functi/
 //
 
-/** 
- * Similar with strnlen() except that
- * if the terminating null byte is not encountered before maxlength,
- * the returned value is not equal with maxlength.
- * 
- * But a negative number will be returned instead.
- */
-int SAFESTR_Length(const safestr_t* pStr);
+int SAFESTR_GetLength(const safestr_t* pStr);
 
 int SAFESTR_LowerCase(safestr_t* dest, const safestr_t* src);
 int SAFESTR_UpperCase(safestr_t* dest, const safestr_t* src);
