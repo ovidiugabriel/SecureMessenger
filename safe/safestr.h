@@ -49,8 +49,12 @@ int SAFESTR_CompareBytes(struct SAFESTR* buffer1, int buffer1Index,
 
 int safe_CompareStrings(const char* string1, int string1Size, int string1Index, 
     const char* string2, int string2Size, int string2Index, int caseSensitive);
+int SAFESTR_CompareStrings(const struct SAFESTR* string1, int string1Index,
+    const struct SAFESTR* string2, int string2Index, int caseSensitive);
     
 int safe_FindPattern(const char* buffer, int bufferSize, int startingIndex, int numberOfBytes, 
     const char* pattern, int patternSize, int caseSensitive, int startFromRight);
+int SAFESTR_FindPattern(const struct SAFESTR* buffer, int startingIndex, int numberOfBytes,
+    const struct SAFESTR* pattern, int caseSensitive, int startFromRight);
 
 #endif
