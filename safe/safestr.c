@@ -1,6 +1,12 @@
 
 #include "safestr.h"
 
+struct SAFESTR {
+    int mSize;
+    int mLength;
+    char* mBuffer;
+};
+
 safestr_t SAFESTR_Make(int size)
 {
     safestr_t safeString;
