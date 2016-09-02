@@ -7,7 +7,7 @@ struct SAFESTR {
     char* mBuffer;
 };
 
-safestr_t* SAFESTR_Make(safestr_t* pSafeString int size)
+safestr_t* SAFESTR_Make(safestr_t* pSafeString, int size)
 {
     pSafeString->mBuffer = (char*) calloc(size);
     pSafeString->mSize = (pSafeString->mBuffer) ? size : 0;
