@@ -17,15 +17,29 @@ struct STR {
  * 
  * But a negative number will be returned instead.
  */
-int StringLength(const char string[], size_t maxlen);
+int safe_StringLength(const char string[], int maxlen);
 
-void StringLowerCase(char string[]);
-void StringUpperCase(char string[]);
-void FillBytes(char buffer[], int startingIndex, size_t numberOfBytes, int value);
-void CopyBytes(char targetBuffer[], int targetIndex, char sourceBuffer[], int sourceIndex, size_t numberOfBytes);
-void CopyString(char targetString[], int targetIndex, char sourceString[], int sourceIndex, ssize_t maximumBytes);
-int CompareBytes(char buffer1[], int buffer1Index, char buffer2[], int buffer2Index, size_t numberOfBytes, int caseSensitive);
-int CompareStrings(char string1[], int string1Index, char string2[], int string2Index, int caseSensitive);
-int FindPattern(char buffer[], int startingIndex, ssize_t numberOfBytes, char pattern[], int caseSensitive, int startFromRight);
+int safe_StringLowerCase(char* destString, int destStringSize,
+    const char* sourceString, int sourceStringSize );
+    
+int safe_StringUpperCase(char* destString, int destStringSize,
+    const char* sourceString, int sourceStringSize );
+
+int safe_FillBytes(char* buffer, int bufferSize, int startingIndex, int numberOfBytes, unsigned char value);
+
+int safe_CopyBytes(char* targetBuffer int targetBufferSize, int targetIndex, 
+    const char* sourceBuffer int sourceBufferSize, int sourceIndex, int numberOfBytes);
+
+int safe_CopyString(char* targetString int targetStringSize, int targetIndex, 
+    const char* sourceString, int sourceStringSize, int sourceIndex, int maximumBytes);
+
+int safe_CompareBytes(const char* buffer1 int buffer1Size, int buffer1Index, 
+    const char* buffer2, int buffer2Size, int buffer2Index, int numberOfBytes, int caseSensitive);
+
+int safe_CompareStrings(const char* string1, int string1Size, int string1Index, 
+    const char* string2, int string2Size, int string2Index, int caseSensitive);
+    
+int safe_FindPattern(const char* buffer, int bufferSize, int startingIndex, int numberOfBytes, 
+    const char* pattern, int patternSize, int caseSensitive, int startFromRight);
 
 #endif
