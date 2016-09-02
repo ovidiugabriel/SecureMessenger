@@ -4,7 +4,7 @@
 struct SAFESTR {
     int mSize;
     int mLength;
-    char* buffer;
+    char* mBuffer;
 };
 typedef struct SAFESTR safestr_t;
 
