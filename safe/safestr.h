@@ -4,6 +4,8 @@
 struct SAFESTR;
 typedef struct SAFESTR safestr_t;
 
+safestr_t* SAFESTR_Make(safestr_t* pSafeString, int size);
+
 //
 // Initial Source: https://zone.ni.com/reference/en-XX/help/370051V-01/cvi/libref/cviformatting_and_io_library_functi/
 //
