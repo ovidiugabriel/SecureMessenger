@@ -2,6 +2,7 @@
 #define SAFE_FORMATIO_H
 
 struct STR {
+    int mSize;
     int mLength;
     char* buffer;
 };
