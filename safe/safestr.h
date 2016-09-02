@@ -1,6 +1,7 @@
 #ifndef SAFESTR_H
 #define SAFESTR_H
 
+struct SAFESTR;
 typedef struct SAFESTR safestr_t;
 
 //
