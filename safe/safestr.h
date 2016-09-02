@@ -4,6 +4,11 @@
 struct SAFESTR;
 typedef struct SAFESTR safestr_t;
 
+/** 
+ * Allocates space for the string.
+ * If allocation fails, NULL is returned.
+ * When allocation is successful, pSafeString is returned.
+ */
 safestr_t* SAFESTR_Make(safestr_t* pSafeString, int size);
 
 //
