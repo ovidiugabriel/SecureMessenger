@@ -1,11 +1,6 @@
 #ifndef SAFESTR_H
 #define SAFESTR_H
 
-struct SAFESTR {
-    int mSize;
-    int mLength;
-    char* mBuffer;
-};
 typedef struct SAFESTR safestr_t;
 
 //
