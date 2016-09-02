@@ -1,11 +1,24 @@
 #ifndef SAFE_FORMATIO_H
 #define SAFE_FORMATIO_H
 
+struct STR {
+    int mLength;
+    char* buffer;
+};
+
 //
 // Initial Source: https://zone.ni.com/reference/en-XX/help/370051V-01/cvi/libref/cviformatting_and_io_library_functi/
 //
 
-int StringLength(const char string[], size_t maxlen, int* length);
+/** 
+ * Similar with strnlen() except that
+ * if the terminating null byte is not encountered before maxlength,
+ * the returned value is not equal with maxlength.
+ * 
+ * But a negative number will be returned instead.
+ */
+int StringLength(const char string[], size_t maxlen);
+
 void StringLowerCase(char string[]);
 void StringUpperCase(char string[]);
 void FillBytes(char buffer[], int startingIndex, size_t numberOfBytes, int value);
