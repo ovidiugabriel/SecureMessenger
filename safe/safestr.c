@@ -18,7 +18,7 @@ safestr_t* SAFESTR_Make(safestr_t* pSafeString, int size)
     return NULL;
 }
 
-int SAFESTR_Length(const safestr_t* pSafeString)
+int SAFESTR_GetLength(const safestr_t* pSafeString)
 {
     return pSafeString->mLength;
 }
